@@ -27,7 +27,8 @@ $fields-mob: 16px;
 @mixin container-full() {
   padding-left: $fields;
   padding-right: $fields;
-  @media all and (max-width: 584px) {
+
+  @media all and (max-width: 600px) {
     padding-left: $fields-mob;
     padding-right: $fields-mob;
   }
