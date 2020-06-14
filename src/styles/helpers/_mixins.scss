@@ -1,0 +1,84 @@
+@mixin font-td {
+  font-size: 14px;
+  font-family: 'PT Root UI';
+  font-weight: normal;
+  line-height: 150px;
+}
+@mixin font-main-page-h1 {
+  font-size: 46px;
+  font-family: 'PT Root UI';
+  font-weight: bold;
+  line-height: 56px;
+}
+@mixin font-h1 {
+  font-size: 36px;
+  font-family: 'PT Root UI';
+  font-weight: bold;
+  line-height: 46px;
+}
+@mixin font-h2 {
+  font-size: 24px;
+  font-family: 'PT Root UI';
+  font-weight: bold;
+  line-height: 30px;
+}
+@mixin font-big-text {
+  font-size: 24px;
+  font-family: 'PT Root UI';
+  font-weight: normal;
+  line-height: 30px;
+}
+@mixin font-text {
+  font-size: 18px;
+  font-family: 'PT Root UI';
+  font-weight: normal;
+  line-height: 26px;
+}
+@mixin font-small-text {
+  font-size: 15px;
+  font-family: 'PT Root UI';
+  font-weight: normal;
+  line-height: 21px;
+}
+@mixin font-h3 {
+  font-size: 20px;
+  font-family: 'PT Root UI';
+  font-weight: bold;
+  line-height: 28px;
+}
+// @mixin font-mob-h1 {
+//   font-size: 24px;
+//   font-family: 'PT Root UI';
+//   font-weight: bold;
+//   line-height: 28px;
+// }
+// @mixin font-mob-h2 {
+//   font-size: 20px;
+//   font-family: 'PT Root UI';
+//   font-weight: bold;
+//   line-height: 26px;
+// }
+// @mixin font-mob-h3 {
+//   font-size: 15px;
+//   font-family: 'PT Root UI';
+//   font-weight: bold;
+//   line-height: 18px;
+// }
+// @mixin font-mob-big-text {
+//   font-size: 18px;
+//   font-family: 'PT Root UI';
+//   font-weight: normal;
+//   line-height: 24px;
+// }
+// @mixin font-mob-text {
+//   font-size: 15px;
+//   font-family: 'PT Root UI';
+//   font-weight: normal;
+//   line-height: 18px;
+// }
+// @mixin font-mob-small-text {
+//   font-size: 13px;
+//   font-family: 'PT Root UI';
+//   font-weight: normal;
+//   line-height: 18px;
+// }
