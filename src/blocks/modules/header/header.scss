@@ -4,6 +4,7 @@
   background-color: $color-onprimary-default;
   border-bottom: 1px solid $color-onsurface-lines;
   padding: 5px 0;
+  z-index: 100;
 
   .container {
     max-width: 100%;
@@ -65,8 +66,6 @@
 
 .header-link {
   a {
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 140%;
     color: $color-onsurface-primary;
