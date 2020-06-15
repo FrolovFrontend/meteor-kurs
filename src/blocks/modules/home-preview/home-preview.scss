@@ -31,7 +31,20 @@
     width: 100%;
 
     svg {
-      opacity: .8;
+      opacity: 0.8;
     }
+  }
+}
+
+.move-svg {
+  animation: move-svg 10s linear alternate infinite;
+}
+
+@keyframes move-svg {
+  from {
+    transform: translateX(0) scaleX(1);
+  }
+  to {
+    transform: translateX(-60%) scaleX(1.5);
   }
 }
