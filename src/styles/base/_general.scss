@@ -38,8 +38,8 @@ body {
 
 .container {
   @include container();
-  @include sm(max-width, rem(510));
-  @include md(max-width, rem(690));
-  @include lg(max-width, rem(930));
-  @include xl(max-width, rem(1414));
+  @include sm(max-width, rem(520));
+  @include md(max-width, rem(688));
+  @include lg(max-width, rem(900));
+  @include xl(max-width, rem(1384));
 }
