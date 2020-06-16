@@ -135,4 +135,10 @@
   .logo-svg {
     fill: $color-onprimary-default;
   }
+
+  .header__menu-btn {
+    svg {
+      fill: $color-onprimary-default;
+    }
+  }
 }
