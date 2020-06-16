@@ -118,3 +118,21 @@
     height: 15px;
   }
 }
+
+.header.header-homepage {
+  background-color: #040486;
+  border-bottom: 1px solid $color-onsurface-lines-light;
+
+  .header-link__svg {
+    path {
+      stroke: $color-onprimary-default;
+    }
+  }
+  .header-link a {
+    color: $color-onprimary-default;
+  }
+
+  .logo-svg {
+    fill: $color-onprimary-default;
+  }
+}
