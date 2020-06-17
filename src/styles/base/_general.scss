@@ -9,7 +9,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
 }
@@ -34,6 +36,7 @@ button {
 
 body {
   @include font-text;
+  min-height: 1200px; // удалить после завершения верстки
 }
 
 .container {

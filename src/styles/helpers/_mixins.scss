@@ -50,10 +50,30 @@
 }
 @mixin font-h3 {
   font-size: 20px;
-  font-family: 'PT Root UI';
-  font-weight: bold;
   line-height: 28px;
+  font-weight: 700;
 }
+
+@mixin link {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-meteor-04 100%,
+    transparent 100%
+  );
+  background-position: 0 24px;
+  background-repeat: repeat-x;
+}
+
+@mixin link-arrow {
+  position: relative;
+  
+  &::after {
+    content: '' url(../../../img/svg/link-arrow.svg);
+    position: absolute;
+    transform: translateX(50%);
+  }
+}
+
 // @mixin font-mob-h1 {
 //   font-size: 24px;
 //   font-family: 'PT Root UI';

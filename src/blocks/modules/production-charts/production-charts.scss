@@ -1,0 +1,92 @@
+.production-charts {
+  overflow-x: hidden;
+  // &__container {
+  // }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // flex-flow: row wrap;
+  }
+
+  &__item {
+    width: auto;
+    border-right: 1px solid $color-onsurface-lines;
+    margin-right: 16px;
+    padding-right: 10px;
+    flex: 1 1 100%;
+
+    &:last-child {
+      border-right: none;
+      margin-right: 0;
+    }
+  }
+
+  &__head {
+    margin-bottom: 5px;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    margin-right: 16px;
+  }
+
+  &__heading {
+    display: inline;
+    color: $color-primary-meteor;
+    @include font-h3;
+    @include link;
+    @include link-arrow;
+  }
+
+  &__chart {
+    margin-bottom: 5px;
+  }
+
+  // &__chart--1 {
+
+  // }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__price {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__units-produced {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  &__year {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 15px;
+    line-height: 21px;
+
+    span {
+      color: $color-golden;
+    }
+  }
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  
+  &__tooltip {
+  }
+
+  &__tooltip--1 {
+  }
+}
