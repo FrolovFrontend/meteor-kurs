@@ -17,7 +17,11 @@
             xmlns="http://www.w3.org/2000/svg">
             <path d="M1 87H323" stroke="#898989" stroke-dasharray="2 4" />
             <path d="M1 87L105.524 64.752L215.948 45.8L323 3" stroke="#222730" stroke-width="2" />
-            <circle class="chart__tooltip chart__tooltip--1" cx="3" cy="87" r="3" fill="#071FEF" />
+
+            <circle class="has-tooltip" aria-label="2018" cx="3" cy="87" r="3" fill="#071FEF">
+              <tspan class="tooltip">2018</tspan>
+            </circle>
+
             <circle class="chart__tooltip chart__tooltip--2" cx="324" cy="3" r="3" fill="#071FEF" />
             <circle class="chart__tooltip chart__tooltip--3" cx="217" cy="45" r="3" fill="#071FEF" />
             <circle class="chart__tooltip chart__tooltip--4" cx="110" cy="64" r="3" fill="#071FEF" />
@@ -50,6 +54,7 @@
             <circle class="chart__tooltip chart__tooltip--7" cx="218" cy="20" r="3" fill="#071FEF" />
             <circle class="chart__tooltip chart__tooltip--8" cx="101" cy="87" r="3" fill="#071FEF" />
           </svg>
+          <span class="tooltip">2018</span>
         </div>
         <div class="production-charts__text">
           <b class="production-charts__price">47 000</b>
@@ -101,7 +106,7 @@
             Изделия разрабатываются под запрос клиента по&nbsp;определенным критериям.
           </small>
         </div>
-        <button class="button">
+        <button class="button button-primary">
           Сделать заявку
         </button>
       </li>
