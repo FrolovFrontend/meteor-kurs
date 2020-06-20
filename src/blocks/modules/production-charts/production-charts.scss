@@ -45,6 +45,7 @@
   }
 
   &__chart {
+    position: relative;
     margin-bottom: 5px;
   }
 
@@ -86,11 +87,11 @@
   width: 100%;
   height: auto;
 
-  &__tooltip {
-  }
+  // &__tooltip {
+  // }
 
-  &__tooltip--1 {
-  }
+  // &__tooltip--1 {
+  // }
 }
 
 @media all and (max-width: 1280px) {

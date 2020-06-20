@@ -1,8 +1,6 @@
 // класс для элемента, который содержит тултип
 .has-tooltip {
   position: relative;
-  min-width: 32px;
-  min-height: 32px;
   cursor: pointer;
 }
 .has-tooltip:hover .tooltip {
@@ -12,29 +10,36 @@
 
 // span с этим классом ложим в элемент с классом .has-tooltip
 .tooltip {
-  display: none;
+  display: inline-block;
 
   position: absolute;
-  top: -50px;
+  top: 750px;
   left: 50%;
-
-  min-width: 350px;
   text-align: center;
   background: $color-onprimary-default;
   color: $color-onsurface-primary;
+  border: 1px solid $color-electric-06;
   border-radius: 9px;
   padding: 2px 8px;
   font-size: 15px;
+  font-weight: 700;
   line-height: 22px;
   margin-bottom: 10px;
   cursor: default;
+  z-index: 10;
 }
-.tooltip::after {
+.tooltip::after,
+.tooltip::before {
   // Это уголок
   content: '';
   position: absolute;
-  top: 100%;
-  left: 4px;
-  border: 8px solid transparent;
-  border-top-color: rgba(0, 0, 0, 0.8);
+  left: calc(50% - 7px);
+  bottom: -14px;
+  border: 7px solid transparent;
+  border-top: 7px solid $color-electric;
+}
+
+.tooltip::after {
+  border-top: 7px solid $color-onprimary-default;
+  bottom: -13px;
 }
