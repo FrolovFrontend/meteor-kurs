@@ -1,85 +1,77 @@
-import Chart from 'chart.js';
+import ApexCharts from 'apexcharts';
 
-const ctx1 = document.getElementById('chart-1');
-const ctx2 = document.getElementById('chart-2');
-const ctx3 = document.getElementById('chart-3');
-
-let myChart1 = new Chart(ctx1, {
-  type: 'line',
-  data: {
-    datasets: [
-      {
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)'],
-        borderWidth: 1,
-      },
-    ],
+const options1 = {
+  chart: {
+    height: 96,
+    toolbar: {
+      show: false,
+    },
+    type: 'line',
   },
-  options: {
-    responsive: true,
-    maintainAspectRatio: true,
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
+  stroke: {
+    width: 2,
+    colors: ['#222730'],
+  },
+  markers: {
+    size: 4,
+    colors: ['#071FEF'],
+  },
+  series: [
+    {
+      name: '',
+      data: [17000, 34000, 53000, 86000],
+    },
+  ],
+  xaxis: {
+    lines: {
+      show: false,
+    },
+    categories: [2017, 2018, 2019, 2020],
+    tooltip: {
+      enabled: false,
+    },
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: true,
+      color: '#898989',
     },
   },
-});
-let myChart2 = new Chart(ctx2, {
-  type: 'line',
-  data: {
-    datasets: [
-      {
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)'],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: true,
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
+  yaxis: {
+    labels: {
+      show: false,
     },
   },
-});
+  grid: {
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  tooltip: {
+    followCursor: false,
+    theme: false,
+    style: {
+      fontSize: '15px',
+      fontFamily: 'PT Root UI, sans-serif',
+    },
+    marker: {
+      show: false,
+    },
+  },
+};
 
-let myChart3 = new Chart(ctx3, {
-  type: 'line',
-  data: {
-    datasets: [
-      {
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)'],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: true,
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  },
-});
+const chart1 = new ApexCharts(document.querySelector('#chart-1'), options1);
+const chart2 = new ApexCharts(document.querySelector('#chart-2'), options1);
+const chart3 = new ApexCharts(document.querySelector('#chart-3'), options1);
+
+chart1.render();
+chart2.render();
+chart3.render();

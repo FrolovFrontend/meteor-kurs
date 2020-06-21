@@ -45,7 +45,6 @@
   }
 
   &__chart {
-    position: relative;
     margin-bottom: 5px;
   }
 
@@ -85,13 +84,28 @@
 
 .chart {
   width: 100%;
-  height: auto;
+}
 
-  // &__tooltip {
-  // }
+.apexcharts-tooltip {
+  background-color: $color-onprimary-default;
+  border: 1px solid $color-electric-06;
+  padding: 0 6px;
 
-  // &__tooltip--1 {
-  // }
+  .apexcharts-tooltip-series-group.apexcharts-active,
+  .apexcharts-tooltip-series-group:last-child {
+    padding-bottom: 0;
+  }
+
+  .apexcharts-tooltip-title {
+    font-weight: 700;
+    margin-bottom: 0;
+    color: $color-onsurface-primary;
+    // background-color: $color-onprimary-default;
+  }
+}
+
+.apexcharts-tooltip-text {
+  display: none;
 }
 
 @media all and (max-width: 1280px) {
