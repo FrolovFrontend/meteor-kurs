@@ -7,6 +7,30 @@ const options1 = {
       show: false,
     },
     type: 'line',
+    events: {
+      mouseMove: function (event, chartContext, config) {
+        const dataPointIndex = config.dataPointIndex;
+        const dataSeries = config.globals.series.flat();
+
+        const currentDataSeries = dataSeries.find(
+          (el) => dataSeries.indexOf(el) === dataPointIndex
+        );
+
+        const currentPercent = dataPercent1.find(
+          (el) => dataPercent1.indexOf(el) === dataPointIndex
+        );
+
+        if (currentDataSeries) {
+          units1.textContent = currentDataSeries;
+          percent1.textContent = currentPercent;
+        } else {
+          units1.textContent = dataSeries1[dataSeries1.length - 1];
+          percent1.textContent = dataPercent1[dataPercent1.length - 1];
+        }
+
+        // console.log(currentDataSeries, dataPointIndex);
+      },
+    },
   },
   stroke: {
     width: 2,
@@ -20,6 +44,7 @@ const options1 = {
     {
       name: '',
       data: [17000, 34000, 53000, 86000],
+      percent: [41, 56, 64, 74],
     },
   ],
   xaxis: {
@@ -75,3 +100,12 @@ const chart3 = new ApexCharts(document.querySelector('#chart-3'), options1);
 chart1.render();
 chart2.render();
 chart3.render();
+
+const dataSeries1 = options1.series.map((el) => el.data).flat(); // получили копию массива data первого графика
+const dataPercent1 = options1.series.map((el) => el.percent).flat(); // получили массив процентов
+
+const units1 = document.getElementById('units1');
+const percent1 = document.getElementById('percent1');
+
+units1.textContent = dataSeries1[dataSeries1.length - 1]; // показываем последнее значение по умолчанию
+percent1.textContent = dataPercent1[dataPercent1.length - 1];

@@ -59,7 +59,7 @@
     margin-bottom: 24px;
   }
 
-  &__price {
+  &__units {
     font-size: 30px;
     line-height: 36px;
   }
@@ -101,6 +101,12 @@
     margin-bottom: 0;
     color: $color-onsurface-primary;
     // background-color: $color-onprimary-default;
+  }
+}
+
+.apexcharts-xaxis {
+  line {
+    stroke-dasharray: 2 4;
   }
 }
 
