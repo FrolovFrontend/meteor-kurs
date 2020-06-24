@@ -2,7 +2,7 @@ export default window.Apex = {
   chart: {
     type: 'line',
     height: 96,
-    offsetX: 2,
+    offsetX: 3,
     toolbar: {
       show: false,
     },

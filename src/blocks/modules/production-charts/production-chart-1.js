@@ -4,10 +4,7 @@ export const options1 = {
       mouseMove: function (event, chartContext, config) {
         const dataPointIndex = config.dataPointIndex;
         const dataSeries = config.globals.series.flat();
-        // const mousePosX = config.globals.clientX;
 
-        // когда индекс элемента массива с произведенными единицами
-        // равен индексу маркера currentDataSeries = true
         let currentDataSeries = dataSeries.find(
           (el) => dataSeries.indexOf(el) === dataPointIndex
         );
@@ -16,10 +13,6 @@ export const options1 = {
           (el) => dataPercent1.indexOf(el) === dataPointIndex
         );
 
-        // if (mousePosX < 45) {
-        //   currentDataSeries = false;
-        // }
-
         if (currentDataSeries) {
           units1.textContent = currentDataSeries;
           percent1.textContent = currentPercent;
@@ -27,7 +20,6 @@ export const options1 = {
           units1.textContent = dataSeries1[dataSeries1.length - 1];
           percent1.textContent = dataPercent1[dataPercent1.length - 1];
         }
-        // console.log(currentDataSeries);
       },
     },
   },

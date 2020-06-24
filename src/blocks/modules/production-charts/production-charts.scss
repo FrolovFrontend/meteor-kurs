@@ -18,14 +18,11 @@
     }
   }
 
-  &__head {
-    margin-bottom: 8px;
-  }
-
   &__figure {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 8px;
   }
 
   &__image {
@@ -38,20 +35,16 @@
 
   &__heading {
     display: inline;
-    color: $color-primary-meteor;
     @include font-h3;
     @include link;
     @include link-arrow;
-  }
-
-  &__chart {
-    margin-bottom: 5px;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: 5px;
   }
 
   &__description {
@@ -71,7 +64,7 @@
 
   &__year {
     position: absolute;
-    right: 0;
+    right: 8px;
     top: 5px;
     font-size: 15px;
     line-height: 21px;
@@ -83,7 +76,7 @@
 }
 
 .chart {
-  width: 100%;
+  margin-left: -20px;
 }
 
 .apexcharts-tooltip {
@@ -149,7 +142,6 @@
     }
 
     &__item {
-      flex: none;
       max-width: 48.8%;
       &:nth-child(2n) {
         border-right: none;
@@ -189,6 +181,18 @@
         margin-right: 0;
         padding-right: 40px;
       }
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 599px) {
+  .production-charts__item {
+    &:last-child {
+      padding-right: 16px;
     }
   }
 }
