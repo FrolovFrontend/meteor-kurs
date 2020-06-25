@@ -14,10 +14,10 @@ export const options3 = {
         );
 
         if (currentDataSeries) {
-          units3.textContent = currentDataSeries;
+          units3.textContent = currentDataSeries.toLocaleString('ru-RU');
           percent3.textContent = currentPercent;
         } else {
-          units3.textContent = dataSeries3[dataSeries3.length - 1];
+          units3.textContent = dataSeries3[dataSeries3.length - 1].toLocaleString('ru-RU');
           percent3.textContent = dataPercent3[dataPercent3.length - 1];
         }
       },
@@ -36,5 +36,5 @@ const dataSeries3 = options3.series.map((el) => el.data).flat();
 const dataPercent3 = options3.series.map((el) => el.percent).flat();
 const units3 = document.getElementById('units3');
 const percent3 = document.getElementById('percent3');
-units3.textContent = dataSeries3[dataSeries3.length - 1];
+units3.textContent = dataSeries3[dataSeries3.length - 1].toLocaleString('ru-RU');
 percent3.textContent = dataPercent3[dataPercent3.length - 1];

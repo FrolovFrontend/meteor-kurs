@@ -14,10 +14,10 @@ export const options1 = {
         );
 
         if (currentDataSeries) {
-          units1.textContent = currentDataSeries;
+          units1.textContent = currentDataSeries.toLocaleString('ru-RU');
           percent1.textContent = currentPercent;
         } else {
-          units1.textContent = dataSeries1[dataSeries1.length - 1];
+          units1.textContent = dataSeries1[dataSeries1.length - 1].toLocaleString('ru-RU');
           percent1.textContent = dataPercent1[dataPercent1.length - 1];
         }
       },
@@ -36,5 +36,5 @@ const dataSeries1 = options1.series.map((el) => el.data).flat(); // получи
 const dataPercent1 = options1.series.map((el) => el.percent).flat(); // получили массив процентов
 const units1 = document.getElementById('units1'); // едениц произведено
 const percent1 = document.getElementById('percent1'); // проценты
-units1.textContent = dataSeries1[dataSeries1.length - 1]; // показываем последнее значение по умолчанию
+units1.textContent = dataSeries1[dataSeries1.length - 1].toLocaleString('ru-RU'); // показываем последнее значение по умолчанию
 percent1.textContent = dataPercent1[dataPercent1.length - 1]; // показываем последнее значение по умолчанию
