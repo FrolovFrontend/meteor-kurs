@@ -34,9 +34,7 @@
   }
 
   &__heading {
-    display: inline;
-    @include font-h3;
-    @include link;
+    @include link--20;
     @include link-arrow;
   }
 

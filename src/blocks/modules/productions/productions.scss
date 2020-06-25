@@ -1,0 +1,21 @@
+.productions {
+  padding-top: 152px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+
+  &__heading {
+    @include font-h1;
+    max-width: 676px;
+  }
+
+  &__to-catalog {
+    @include link--24;
+    @include link-arrow;
+    margin-right: 16px;
+  }
+}

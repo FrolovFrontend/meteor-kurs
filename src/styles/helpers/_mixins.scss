@@ -15,20 +15,17 @@
 }
 @mixin font-h1 {
   font-size: 36px;
-  font-family: 'PT Root UI';
-  font-weight: bold;
+  font-weight: 700;
   line-height: 46px;
 }
 @mixin font-h2 {
   font-size: 24px;
-  font-family: 'PT Root UI';
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
 }
 @mixin font-big-text {
   font-size: 24px;
-  font-family: 'PT Root UI';
-  font-weight: normal;
+  font-weight: 400;
   line-height: 30px;
 }
 @mixin font-text {
@@ -55,13 +52,14 @@
 }
 
 @mixin link {
+  display: inline;
+  height: fit-content;
   color: $color-primary-meteor;
   background-image: linear-gradient(
     to right,
     $color-primary-meteor-04 100%,
     transparent 100%
   );
-  background-position: 0 24px;
   background-repeat: repeat-x;
 
   @media all and (min-width: 599px) {
@@ -74,6 +72,29 @@
       );
     }
   }
+}
+
+@mixin link--18 {
+  @include link;
+  font-size: 18px;
+  line-height: 26px;
+  background-position: 0 24px;
+}
+
+@mixin link--20 {
+  @include link;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  background-position: 0 24px;
+}
+
+@mixin link--24 {
+  @include link;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  background-position: 0 29px;
 }
 
 @mixin link-arrow {
