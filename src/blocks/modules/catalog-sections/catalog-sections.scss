@@ -1,0 +1,60 @@
+.catalog-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px;
+
+  // &__item {
+  //   padding: 45px 32px 45px 24px;
+  // }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 45px 32px 45px 24px;
+    border: 1px solid $color-surface-default;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: $transition;
+
+    &:hover {
+      box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.1);
+
+      .catalog-sections__heading {
+        color: $color-electric;
+        background-image: linear-gradient(
+          to right,
+          $color-electric-04 100%,
+          transparent 100%
+        );
+        &::after {
+          content: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 1L9 6L4 11' stroke='%23071FEF' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+
+  &__figure {
+    min-width: 180px;
+    min-height: 180px;
+    margin-right: 32px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+  }
+
+  &__heading {
+    @include link--24;
+    @include link-arrow;
+    margin-bottom: 20px;
+    transition: $transition;
+  }
+
+  &__descr {
+    @include font-small-text;
+    color: $color-onsurface-primary;
+  }
+}
