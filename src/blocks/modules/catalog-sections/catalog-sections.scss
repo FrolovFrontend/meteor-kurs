@@ -3,14 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 32px;
 
-  // &__item {
-  //   padding: 45px 32px 45px 24px;
-  // }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    padding: 45px 32px 45px 24px;
+  &__item {
     border: 1px solid $color-surface-default;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     transition: $transition;
@@ -32,9 +25,15 @@
     }
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 44px 32px 44px 24px;
+  }
+
   &__figure {
-    min-width: 180px;
-    min-height: 180px;
+    max-width: 29%;
+    min-width: 144px;
     margin-right: 32px;
   }
 
@@ -43,18 +42,43 @@
     width: 100%;
   }
 
-  &__text {
-  }
-
   &__heading {
     @include link--24;
     @include link-arrow;
-    margin-bottom: 20px;
     transition: $transition;
   }
 
   &__descr {
     @include font-small-text;
     color: $color-onsurface-primary;
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+
+  &__descr--custom-work {
+    margin-bottom: 20px;
   }
 }
+
+@media all and (max-width: 1279px) {
+  .catalog-sections {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 8px;
+
+    &__figure {
+      max-width: 29%;
+      min-width: 180px;
+      margin-right: 24px;
+    }
+
+    &__descr {
+      max-width: 642px;
+    }
+  }
+}
+
+// @media all and (max-width: 599px) {
+//   .catalog-sections {
+  
+//   }
+// }
