@@ -1,8 +1,7 @@
 @mixin font-td {
   font-size: 14px;
-  font-family: 'PT Root UI';
-  font-weight: normal;
-  line-height: 150px;
+  font-weight: 400;
+  line-height: 15px;
 }
 @mixin font-main-page-h1 {
   font-size: 46px;
@@ -85,7 +84,7 @@
   @include link;
   font-size: 18px;
   line-height: 26px;
-  background-position: 0 24px;
+  background-position: 0 22px;
 }
 
 @mixin link--20 {
