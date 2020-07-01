@@ -4,7 +4,7 @@
   &__head {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     flex-wrap: wrap;
   }
 
@@ -87,5 +87,69 @@
 
   &__issued {
     display: block;
+    @include font-small-text;
+    color: $color-onsurface-secondary;
+    margin-top: 4px;
+  }
+}
+
+@media all and (max-width: 1279px) {
+  .about {
+    &__text {
+      justify-content: start;
+      flex-direction: column;
+    }
+
+    &__description {
+      max-width: 688px;
+      margin-bottom: 40px;
+    }
+
+    &__certificates {
+      max-width: 688px;
+    }
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .about {
+    &__heading {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .about {
+    &__description {
+      margin-right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 599px) {
+  .about {
+    padding-top: 60px;
+
+    &__head {
+      margin-bottom: 32px;
+    }
+
+    &__heading {
+      margin-bottom: 16px;
+    }
+
+    &__certificates {
+      flex-direction: column;
+    }
+
+    &__certificat {
+      margin-right: 0;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

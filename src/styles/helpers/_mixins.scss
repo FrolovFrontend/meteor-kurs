@@ -85,6 +85,12 @@
   font-size: 18px;
   line-height: 26px;
   background-position: 0 22px;
+
+  @media all and (max-width: 599px) {
+    font-size: 15px;
+    line-height: 18px;
+    background-position: 0 18px;
+  }
 }
 
 @mixin link--20 {
