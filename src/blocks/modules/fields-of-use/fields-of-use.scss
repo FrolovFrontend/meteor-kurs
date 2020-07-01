@@ -1,0 +1,37 @@
+.fields-of-use {
+  padding-top: 60px;
+
+  &__heading {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__figure {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 29% 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  &__figcaption {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__button {
+  }
+}
