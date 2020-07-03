@@ -1,4 +1,4 @@
-modules.define('fields-of-use', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('news-list', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {

@@ -1,4 +1,4 @@
-.fields-of-use {
+.features {
   padding-top: 60px;
 
   &__heading {
@@ -78,7 +78,7 @@
 }
 
 @media all and (max-width: 1023px) {
-  .fields-of-use {
+  .features {
     &__figcaption {
       top: 32px;
     }
@@ -86,7 +86,7 @@
 }
 
 @media all and (max-width: 599px) {
-  .fields-of-use {
+  .features {
     &__heading {
       margin-bottom: 24px;
     }
