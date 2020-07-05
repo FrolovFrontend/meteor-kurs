@@ -188,6 +188,60 @@
 
 /***/ }),
 
+/***/ "./src/blocks/modules/mobile-menu/mobile-menu.js":
+/*!*******************************************************!*\
+  !*** ./src/blocks/modules/mobile-menu/mobile-menu.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var mobileMenu = document.querySelector('.mobile-menu');
+var btnOpen = document.querySelector('.header__menu-btn');
+var btnCLose = document.querySelector('.mobile-menu__close');
+var body = document.querySelector('body');
+var lockPadding = document.querySelector('.header');
+var lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+var timeout = 200;
+
+var bodyLock = function bodyLock() {
+  lockPadding.style.paddingRight = lockPaddingValue;
+  body.style.paddingRight = lockPaddingValue;
+  body.classList.add('lock');
+};
+
+var bodyUnlock = function bodyUnlock() {
+  setTimeout(function () {
+    lockPadding.style.paddingRight = '0px';
+    body.style.paddingRight = '0px';
+    body.classList.remove('lock');
+  }, timeout);
+};
+
+btnOpen.addEventListener('click', function (e) {
+  e.preventDefault();
+  mobileMenu.classList.add('open');
+  bodyLock();
+});
+btnCLose.addEventListener('click', function (e) {
+  e.preventDefault();
+  mobileMenu.classList.remove('open');
+  bodyUnlock();
+});
+mobileMenu.addEventListener('click', function (e) {
+  if (!e.target.closest('.mobile-menu__panel')) {
+    mobileMenu.classList.remove('open');
+    bodyUnlock();
+  }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.which === 27) {
+    mobileMenu.classList.remove('open');
+    bodyUnlock();
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/production-charts/production-chart-1.js":
 /*!********************************************************************!*\
   !*** ./src/blocks/modules/production-charts/production-chart-1.js ***!
@@ -465,11 +519,14 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/home-preview/home-preview */ "./src/blocks/modules/home-preview/home-preview.js");
-/* harmony import */ var _modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_production_charts_production_charts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/production-charts/production-charts */ "./src/blocks/modules/production-charts/production-charts.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_mobile_menu_mobile_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/mobile-menu/mobile-menu */ "./src/blocks/modules/mobile-menu/mobile-menu.js");
+/* harmony import */ var _modules_mobile_menu_mobile_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_menu_mobile_menu__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/home-preview/home-preview */ "./src/blocks/modules/home-preview/home-preview.js");
+/* harmony import */ var _modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_home_preview_home_preview__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_production_charts_production_charts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/production-charts/production-charts */ "./src/blocks/modules/production-charts/production-charts.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
