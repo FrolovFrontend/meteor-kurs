@@ -1215,6 +1215,94 @@ body {
   display: -webkit-box;
 }
 
+.footer {
+  background: #222730;
+  color: white;
+  margin-top: 160px;
+  padding: 32px 0 24px;
+}
+
+.footer__content,
+.footer__nav {
+  display: flex;
+}
+
+.footer__content {
+  justify-content: space-between;
+}
+
+.footer__menu {
+  margin: 0;
+}
+
+.footer__menu--company {
+  margin-right: 96px;
+}
+
+.footer__menu-item {
+  margin-bottom: 6px;
+}
+
+.footer__menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__menu-item:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__menu-item--accent {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.footer__logo:hover {
+  opacity: 0.7;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(225, 225, 225, 0.4);
+  margin-top: 30px;
+  padding-top: 24px;
+}
+
+.footer__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__copy,
+.footer__personal-data,
+.footer__dev {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.footer__copy {
+  margin-right: 10px;
+}
+
+.footer__personal-data,
+.footer__dev {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__dev {
+  min-width: 185px;
+}
+
+.footer__link {
+  text-decoration: underline;
+}
+
+.footer__link:hover {
+  color: white;
+}
+
 @media all and (min-width: 599px) {
   .production-charts__heading:hover::after {
     content: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 1L9 6L4 11' stroke='%23071FEF' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
@@ -1400,6 +1488,19 @@ body {
 
   .news-list__heading {
     margin-bottom: 24px;
+  }
+
+  .footer__nav {
+    display: none;
+  }
+
+  .footer__menu-item {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .footer__copy {
+    margin: 0 0 8px 0;
   }
 }
 
@@ -1699,6 +1800,31 @@ body {
 
   .news-list__text {
     -webkit-line-clamp: 5;
+  }
+
+  .footer {
+    margin-top: 80px;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    order: -1;
+    margin-bottom: 28px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .footer__info {
+    margin-bottom: 24px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
