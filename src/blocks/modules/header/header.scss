@@ -59,6 +59,23 @@
     display: flex;
   }
 
+  &__second-menu-item--bag {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 0 7px;
+    background: $color-primary-meteor;
+    color: $color-onprimary-default;
+    border-radius: 9px;
+    top: -15px;
+    left: calc(100% - 10px);
+  }
+
   &__menu-btn {
     display: none;
   }
@@ -73,6 +90,10 @@
 
   &__text {
     margin-left: 8px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -111,6 +132,11 @@
     &__second-menu-item--tel {
       display: none;
     }
+
+    &__info {
+      top: -6px;
+      left: calc(100% - 12px);
+    }
   }
 
   .logo-svg {
@@ -123,6 +149,10 @@
   background-color: #040486;
   border-bottom: 1px solid $color-onsurface-lines-light;
 
+  .header__info {
+    background: $color-onprimary-default;
+    color: $color-primary-meteor;
+  }
   .header-link__svg {
     path {
       stroke: $color-onprimary-default;

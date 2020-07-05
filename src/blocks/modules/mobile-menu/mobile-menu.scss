@@ -1,0 +1,141 @@
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background: rgba(34, 39, 48, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 200;
+  overflow-y: scroll;
+
+  &__panel,
+  &__container,
+  &__content {
+    height: 100%;
+  }
+
+  &__panel {
+    position: relative;
+    background: $color-background-default;
+    max-width: 320px;
+    min-height: 500px;
+    padding: 90px 0 48px 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__close {
+    position: absolute;
+    top: 28px;
+    right: 16px;
+  }
+
+  &__menu {
+    margin: 0;
+  }
+
+  &__item {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 24px;
+
+    &:nth-child(2n) {
+      margin-bottom: 48px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--bag {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 0 7px;
+    background: $color-primary-meteor;
+    color: $color-onprimary-default;
+    border-radius: 9px;
+    top: -15px;
+    left: calc(100% - 10px);
+  }
+
+  &__icon {
+    display: inline;
+    margin-right: 4px;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+
+    .mobile-menu__panel {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.active {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: $color-primary-meteor;
+    left: -24px;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .mobile-menu {
+    &__content {
+      padding-left: 24px;
+    }
+
+    &__close {
+      top: 16px;
+    }
+
+    &__item {
+      &:nth-child(2n) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__item--bag {
+      margin-top: 24px;
+    }
+
+    &__info {
+      position: absolute;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+      padding: 0 7px;
+      background: $color-primary-meteor;
+      color: $color-onprimary-default;
+      border-radius: 9px;
+      top: -15px;
+      left: calc(100% - 10px);
+    }
+  }
+}

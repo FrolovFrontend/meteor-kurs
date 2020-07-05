@@ -37,6 +37,10 @@ button {
 
 body {
   @include font-text;
+  
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
