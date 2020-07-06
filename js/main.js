@@ -173,7 +173,24 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var homepage = document.querySelector('.homepage');
+var header = document.querySelector('.header');
+var homePreview = document.querySelector('.home-preview');
 
+if (homepage) {
+  header.classList.add('header-homepage');
+}
+
+window.addEventListener('scroll', function () {
+  var homePreviewHeight = homePreview.clientHeight;
+  var scrolled = window.scrollY;
+
+  if (scrolled > homePreviewHeight) {
+    header.classList.remove('header-homepage');
+  } else {
+    header.classList.add('header-homepage');
+  }
+});
 
 /***/ }),
 

@@ -530,6 +530,8 @@ body.lock {
   border-bottom: 1px solid #e1e1e1;
   padding: 5px 0;
   z-index: 100;
+  transition-duration: 0.3s;
+  transition-property: color, background-color, fill, stroke;
 }
 
 .header .container {
