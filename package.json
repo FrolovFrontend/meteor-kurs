@@ -19,10 +19,6 @@
     "build:fonts": "gulp fonts --production",
     "build:favicons": "gulp favicons --production",
     "build:gzip": "gulp gzip --production",
-    "lint:styles": "stylelint \"src/**/*.scss\" --syntax=scss",
-    "lint:styles --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
-    "lint:scripts": "eslint --color ./src/blocks",
-    "lint:scripts --fix": "eslint --fix --color ./src/blocks",
     "deploy": "gulp deploy"
   },
   "devDependencies": {
