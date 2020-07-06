@@ -5,6 +5,8 @@
   border-bottom: 1px solid $color-onsurface-lines;
   padding: 5px 0;
   z-index: 100;
+  transition-duration: 0.3s;
+  transition-property: color, background-color, fill, stroke;
 
   .container {
     max-width: 100%;
