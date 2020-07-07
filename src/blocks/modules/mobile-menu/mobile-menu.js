@@ -5,7 +5,7 @@ const body = document.querySelector('body');
 const lockPadding = document.querySelector('.header');
 
 const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
-const timeout = 200;
+const timeout = 400;
 
 const bodyLock = () => {
   lockPadding.style.paddingRight = lockPaddingValue;
