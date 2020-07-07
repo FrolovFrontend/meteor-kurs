@@ -218,7 +218,7 @@ var btnCLose = document.querySelector('.mobile-menu__close');
 var body = document.querySelector('body');
 var lockPadding = document.querySelector('.header');
 var lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
-var timeout = 200;
+var timeout = 400;
 
 var bodyLock = function bodyLock() {
   lockPadding.style.paddingRight = lockPaddingValue;
